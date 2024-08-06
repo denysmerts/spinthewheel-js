@@ -1,4 +1,6 @@
 {
   "spin": "Spin",
-  "collect": "Collect"
+  "collect": "Collect",
+  "collect-daily-free-spins": "Collect Your Daily Free Spins",
+  "spins-ready-in": "{{spinsNumber}} more spins ready in {{time}}"
 }
