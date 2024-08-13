@@ -1,0 +1,20 @@
+.wheel-container {
+  width: auto;
+  height: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &__pointer {
+    position: absolute;
+    left: 49.1%;
+    top: 0;
+    z-index: 1;
+  }
+
+  &__wheel {
+    transition: transform 4s ease-out; /* Smooth spinning effect */
+  }
+}
