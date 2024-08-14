@@ -1,7 +1,19 @@
+@font-face {
+  font-family: "TT Norms Pro";
+  src: url("/src/assets/fonts/TT Norms Pro Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Norms Pro";
+  src: url("/src/assets/fonts/TT Norms Pro Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  font-family: "TT Norms Pro", Inter, system-ui, Avenir, Helvetica, sans-serif;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);

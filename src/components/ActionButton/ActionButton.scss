@@ -1,4 +1,5 @@
 .action-button {
+  font-family: "TT Norms Pro", Inter, system-ui, Avenir, Helvetica, sans-serif;
   width: auto;
   height: auto;
   padding: 17px 35px;
@@ -7,6 +8,13 @@
   background: linear-gradient(to bottom, #21cc51 0%, #166e55 100%);
   font-size: 24px;
   color: #ffff;
-  font-weight: bold;
   line-height: 18px;
+  margin-top: 30px;
+  margin-bottom: 57px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.action-button:disabled {
+  opacity: 0.5;
 }

@@ -5,9 +5,10 @@ import "./CountDown.scss";
 
 interface CountDownProps {
   spinsNumber: number;
+  onCollectSpins: (spinsToAdd: number) => void;
 }
 
-const Countdown = ({ spinsNumber }: CountDownProps) => {
+export const Countdown = ({ spinsNumber, onCollectSpins }: CountDownProps) => {
   const { t } = useTranslation();
 
   const [collected, setCollected] = useState<boolean>(false);
@@ -24,6 +25,7 @@ const Countdown = ({ spinsNumber }: CountDownProps) => {
   const handleCollectSpins = () => {
     setCollected(false);
     resetCountdown();
+    onCollectSpins(spinsNumber);
   };
 
   const time = `${hours}:${minutes}:${seconds}`;
@@ -42,5 +44,3 @@ const Countdown = ({ spinsNumber }: CountDownProps) => {
     </div>
   );
 };
-
-export default Countdown;

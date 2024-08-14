@@ -11,7 +11,7 @@ interface FortuneWheelProps {
   setSpinning: (spinning: boolean) => void;
 }
 
-const FortuneWheel = ({ spinning, setSpinning }: FortuneWheelProps) => {
+export const FortuneWheel = ({ spinning, setSpinning }: FortuneWheelProps) => {
   const [rotation, setRotation] = useState(0);
 
   useEffect(() => {
@@ -48,5 +48,3 @@ const FortuneWheel = ({ spinning, setSpinning }: FortuneWheelProps) => {
     </div>
   );
 };
-
-export default FortuneWheel;

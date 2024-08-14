@@ -6,16 +6,22 @@ type TranslationKey = "spin" | "collect";
 interface ActionButtonProps {
   translationKey: TranslationKey;
   handleClick: () => void;
+  isActive: boolean;
 }
 
 export const ActionButton = ({
   translationKey,
   handleClick,
+  isActive,
 }: ActionButtonProps) => {
   const { t } = useTranslation();
 
   return (
-    <button className="action-button" onClick={handleClick}>
+    <button
+      className="action-button"
+      onClick={handleClick}
+      disabled={!isActive}
+    >
       {t(translationKey)}
     </button>
   );
