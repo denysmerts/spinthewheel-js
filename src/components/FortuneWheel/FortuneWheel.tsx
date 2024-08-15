@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { ReactComponent as FortuneWheelSVG } from "../../assets/wheel-of-fortune.svg";
-import { ReactComponent as PointerSVG } from "../../assets/pointer.svg";
+import { ReactComponent as FortuneWheelSVG } from "../../assets/svgs/wheel-of-fortune.svg";
+import { ReactComponent as PointerSVG } from "../../assets/svgs/pointer.svg";
 import "./FortuneWheel.scss";
 
 const segments = ["100", "200", "300", "400", "500", "600", "700", "800"];
