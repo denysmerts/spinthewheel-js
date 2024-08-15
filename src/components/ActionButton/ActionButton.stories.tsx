@@ -19,13 +19,32 @@ const handleClick = () => {
 // Define the SpinButton story
 export const SpinButton: Story = {
   render: () => (
-    <ActionButton translationKey="spin" handleClick={handleClick} />
+    <ActionButton
+      translationKey="spin"
+      handleClick={handleClick}
+      isActive={true}
+    />
   ),
 };
 
 // Define the CollectButton story
 export const CollectButton: Story = {
   render: () => (
-    <ActionButton translationKey="collect" handleClick={handleClick} />
+    <ActionButton
+      translationKey="collect"
+      handleClick={handleClick}
+      isActive={true}
+    />
+  ),
+};
+
+// Define the CollectButton story
+export const DisableButton: Story = {
+  render: () => (
+    <ActionButton
+      translationKey="collect"
+      handleClick={handleClick}
+      isActive={false}
+    />
   ),
 };

@@ -1,8 +1,9 @@
 import {
   ActionButton,
-  Countdown,
+  CountDown,
   FortuneWheel,
   InfoLabel,
+  TitleText,
 } from "../../components";
 import { useState } from "react";
 import "./MainScreen.scss";
@@ -25,8 +26,8 @@ export const MainScreen = () => {
   return (
     <div className="main-screen">
       <InfoLabel spinsAmount={spinsAmount} />
-      <div className="text-label">Spin The Wheel</div>
-      <Countdown spinsNumber={5} onCollectSpins={handleCollectSpins} />
+      <TitleText />
+      <CountDown spinsNumber={5} onCollectSpins={handleCollectSpins} />
       <ActionButton
         translationKey="spin"
         handleClick={handleClick}

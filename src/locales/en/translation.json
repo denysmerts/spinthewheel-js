@@ -3,5 +3,6 @@
   "collect": "Collect",
   "collect-daily-free-spins": "Collect Your Daily Free Spins",
   "spins-ready-in": "{{spinsNumber}} more spins ready in {{time}}",
-  "spins-left": "{{spinsAmount}} spins left"
+  "spins-left": "{{spinsAmount}} spins left",
+  "spin-the-wheel": "Spin The Wheel"
 }

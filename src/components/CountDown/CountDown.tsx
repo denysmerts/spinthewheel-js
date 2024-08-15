@@ -8,7 +8,7 @@ interface CountDownProps {
   onCollectSpins: (spinsToAdd: number) => void;
 }
 
-export const Countdown = ({ spinsNumber, onCollectSpins }: CountDownProps) => {
+export const CountDown = ({ spinsNumber, onCollectSpins }: CountDownProps) => {
   const { t } = useTranslation();
 
   const [collected, setCollected] = useState<boolean>(false);

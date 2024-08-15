@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import InfoLabel from "./InfoLabel";
+import { InfoLabel } from "./InfoLabel";
 
 // Define the meta information for Storybook
 const meta: Meta<typeof InfoLabel> = {

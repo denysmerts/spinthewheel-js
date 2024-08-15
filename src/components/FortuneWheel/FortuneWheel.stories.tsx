@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import FortuneWheel from "./FortuneWheel";
+import { FortuneWheel } from "./FortuneWheel";
 
 // Define the meta information for Storybook
 const meta: Meta<typeof FortuneWheel> = {
