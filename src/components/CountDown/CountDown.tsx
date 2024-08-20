@@ -13,7 +13,7 @@ export const CountDown = ({ spinsNumber, onCollectSpins }: CountDownProps) => {
 
   const [collected, setCollected] = useState<boolean>(false);
 
-  const duration = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
+  const duration = 10 * 1000; // 24 hours in milliseconds
 
   const { resetCountdown, getReturnValues } = useCountdown({
     duration,
