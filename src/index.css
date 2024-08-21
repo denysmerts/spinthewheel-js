@@ -1,13 +1,13 @@
 @font-face {
   font-family: "TT Norms Pro";
-  src: url("/src/assets/fonts/TT Norms Pro Bold.otf") format("opentype");
+  src: url("../src/assets/fonts/TT Norms Pro Bold.otf") format("opentype");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: "TT Norms Pro";
-  src: url("/src/assets/fonts/TT Norms Pro Medium.otf") format("opentype");
+  src: url("../src/assets/fonts/TT Norms Pro Medium.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
 }
@@ -18,7 +18,6 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #0e1431;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
