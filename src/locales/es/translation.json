@@ -1,4 +1,8 @@
 {
   "spin": "Girar",
-  "collect": "Recolectar"
+  "collect": "Recolectar",
+  "collect-daily-free-spins": "Reúne tus giros gratis diarios",
+  "spins-ready-in": "{{spinsNumber}} más giros listos en {{time}}",
+  "spins-left": "{{spinsAmount}} gira a la izquierda",
+  "spin-the-wheel": "Gira la rueda"
 }
