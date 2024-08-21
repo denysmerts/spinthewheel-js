@@ -1,0 +1,35 @@
+.pop-up-super-prize {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  border-radius: 15px;
+  width: 327px;
+  height: 374px;
+  background: radial-gradient(circle, #da0000 0%, #590c0c 70%);
+  padding: 24px;
+
+  &__collect-button {
+    width: 100%;
+    margin-top: 26px;
+  }
+
+  &__big-win {
+    width: 300px;
+    height: auto;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__prize-text {
+    font-size: 20px;
+    font-weight: bold;
+    background: linear-gradient(to right, #f8ac38, #e68339);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
