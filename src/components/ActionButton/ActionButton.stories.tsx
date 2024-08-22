@@ -3,7 +3,7 @@ import { ActionButton } from "./ActionButton";
 
 // Define the meta information for Storybook
 const meta: Meta<typeof ActionButton> = {
-  title: "ActionButton",
+  title: "Components/ActionButton",
   component: ActionButton,
 };
 

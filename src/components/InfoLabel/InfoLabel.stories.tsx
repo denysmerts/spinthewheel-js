@@ -3,7 +3,7 @@ import { InfoLabel } from "./InfoLabel";
 
 // Define the meta information for Storybook
 const meta: Meta<typeof InfoLabel> = {
-  title: "InfoLabel",
+  title: "Components/InfoLabel",
   component: InfoLabel,
 };
 

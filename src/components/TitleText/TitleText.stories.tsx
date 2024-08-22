@@ -3,7 +3,7 @@ import { TitleText } from "./TitleText";
 
 // Define the meta information for Storybook
 const meta: Meta<typeof TitleText> = {
-  title: "TitleText",
+  title: "Components/TitleText",
   component: TitleText,
 };
 

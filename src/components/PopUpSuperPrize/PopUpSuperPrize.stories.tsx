@@ -3,7 +3,7 @@ import { PopUpSuperPrize } from "./PopUpSuperPrize";
 
 // Define the meta information for Storybook
 const meta: Meta<typeof PopUpSuperPrize> = {
-  title: "PopUpSuperPrize",
+  title: "Components/PopUpSuperPrize",
   component: PopUpSuperPrize,
 };
 

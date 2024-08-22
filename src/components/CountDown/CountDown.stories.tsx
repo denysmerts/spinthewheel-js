@@ -3,7 +3,7 @@ import { CountDown } from "./CountDown";
 
 // Define the meta information for Storybook
 const meta: Meta<typeof CountDown> = {
-  title: "CountDown",
+  title: "Components/CountDown",
   component: CountDown,
 };
 

@@ -3,7 +3,7 @@ import { MainScreen } from "./MainScreen";
 
 // Define the meta information for Storybook
 const meta: Meta<typeof MainScreen> = {
-  title: "MainScreen",
+  title: "Screens/MainScreen",
   component: MainScreen,
 };
 

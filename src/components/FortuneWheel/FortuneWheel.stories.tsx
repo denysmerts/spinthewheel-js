@@ -4,7 +4,7 @@ import { FortuneWheel } from "./FortuneWheel";
 
 // Define the meta information for Storybook
 const meta: Meta<typeof FortuneWheel> = {
-  title: "FortuneWheel",
+  title: "Components/FortuneWheel",
   component: FortuneWheel,
 };
 
