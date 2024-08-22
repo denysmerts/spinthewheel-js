@@ -28,11 +28,14 @@ export const MainScreen = () => {
       <InfoLabel spinsAmount={spinsAmount} />
       <TitleText />
       <CountDown spinsNumber={5} onCollectSpins={handleCollectSpins} />
-      <ActionButton
-        translationKey="spin"
-        handleClick={handleClick}
-        isActive={!isSpinning && spinsAmount > 0}
-      />
+      <div className="main-screen__spin-button">
+        <ActionButton
+          translationKey="spin"
+          handleClick={handleClick}
+          isActive={!isSpinning && spinsAmount > 0}
+        />
+      </div>
+
       <FortuneWheel spinning={isSpinning} setSpinning={setIsSpinning} />
     </div>
   );
