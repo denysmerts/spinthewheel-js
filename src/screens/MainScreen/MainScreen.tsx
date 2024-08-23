@@ -4,6 +4,7 @@ import {
   FortuneWheel,
   InfoLabel,
   TitleText,
+  NavigationButton,
 } from "../../components";
 import { useState } from "react";
 import "./MainScreen.scss";
@@ -23,9 +24,17 @@ export const MainScreen = () => {
     }
   };
 
+  const openHowToPlay = () => {
+    console.log("test");
+  };
+
   return (
     <div className="main-screen">
-      <InfoLabel spinsAmount={spinsAmount} />
+      <div className="main-screen__nav-bar">
+        <NavigationButton type="how-to-play" onClick={openHowToPlay} />
+        <InfoLabel spinsAmount={spinsAmount} />
+        <NavigationButton type="settings" onClick={openHowToPlay} />
+      </div>
       <TitleText />
       <CountDown spinsNumber={5} onCollectSpins={handleCollectSpins} />
       <div className="main-screen__spin-button">
