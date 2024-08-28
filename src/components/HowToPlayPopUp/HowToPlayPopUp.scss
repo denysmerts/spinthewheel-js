@@ -1,0 +1,59 @@
+font-face {
+  font-family: "InterTight";
+  src: url("../assets/fonts/InterTight-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "InterTight";
+  src: url("../assets/fonts/InterTight-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.how-to-play {
+  display: flex;
+  width: 327px;
+  height: 589px;
+  flex-direction: column;
+  background: radial-gradient(circle, #0f2749 81%, #0f233f 100%);
+  border-radius: 20px;
+  padding: 28px;
+  color: #ffff;
+  position: relative;
+
+  &__title {
+    font-family: "InterTight", sans-serif;
+    font-weight: bold;
+
+    text-align: center;
+    margin-bottom: 28px;
+    margin-top: 17px;
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  &__content {
+    font-family: "InterTight", sans-serif;
+    font-weight: normal;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &__line {
+      display: flex;
+      gap: 10px;
+      font-size: 18px;
+
+      &__number {
+        font-weight: bold;
+      }
+    }
+  }
+  &__chest {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}

@@ -4,5 +4,10 @@
   "collect-daily-free-spins": "Collect Your Daily Free Spins",
   "spins-ready-in": "{{spinsNumber}} more spins ready in {{time}}",
   "spins-left": "{{spinsAmount}} spins left",
-  "spin-the-wheel": "Spin The Wheel"
+  "spin-the-wheel": "Spin The Wheel",
+  "how-to-play-title": "How To Play",
+  "how-to-play-1": "Come back everyday to collect your spins",
+  "how-to-play-2": "Use your spins to spin the wheel",
+  "how-to-play-3": "Get chance to win Super Prize",
+  "how-to-play-4": "Win the prizes!"
 }

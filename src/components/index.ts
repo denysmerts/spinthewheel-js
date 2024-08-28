@@ -5,3 +5,4 @@ export * from "./FortuneWheel";
 export * from "./TitleText";
 export * from "./PopUpSuperPrize";
 export * from "./NavigationButton";
+export * from "./HowToPlayPopUp";
