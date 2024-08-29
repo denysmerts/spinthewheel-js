@@ -16,5 +16,5 @@ const handleClick = () => {
 };
 
 export const Default: Story = {
-  render: () => <HowToPlayPopUp closePopUp={handleClick} />,
+  render: () => <HowToPlayPopUp closePopUp={handleClick} isClosed={false} />,
 };

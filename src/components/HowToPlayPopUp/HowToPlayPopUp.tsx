@@ -5,13 +5,14 @@ import "./HowToPlayPopUp.scss";
 
 interface HowToPlayPopUpProps {
   closePopUp: () => void;
+  isClosed: boolean;
 }
 
 export const HowToPlayPopUp = ({ closePopUp }: HowToPlayPopUpProps) => {
   const { t } = useTranslation();
   return (
     <div className="how-to-play">
-      <CrossSVG onClick={closePopUp} />
+      <CrossSVG onClick={closePopUp} className="how-to-play__cross" />
       <div className="how-to-play__title">{t("how-to-play-title")}</div>
       <div className="how-to-play__content">
         <div className="how-to-play__content__line">

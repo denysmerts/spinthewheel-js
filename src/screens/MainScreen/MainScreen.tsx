@@ -5,6 +5,7 @@ import {
   InfoLabel,
   TitleText,
   NavigationButton,
+  HowToPlayPopUp,
 } from "../../components";
 import { useState } from "react";
 import "./MainScreen.scss";
@@ -12,6 +13,7 @@ import "./MainScreen.scss";
 export const MainScreen = () => {
   const [isSpinning, setIsSpinning] = useState(false);
   const [spinsAmount, setSpinsAmount] = useState<number>(3);
+  const [isHowToPlayOpen, setIsHowToPlayOpen] = useState(false); // State for managing the popup
 
   const handleCollectSpins = (spinsToAdd: number) => {
     setSpinsAmount((prevSpins) => prevSpins + spinsToAdd);
@@ -25,7 +27,11 @@ export const MainScreen = () => {
   };
 
   const openHowToPlay = () => {
-    console.log("test");
+    setIsHowToPlayOpen(true); // Open the popup
+  };
+
+  const closeHowToPlay = () => {
+    setIsHowToPlayOpen(false); // Close the popup
   };
 
   return (
@@ -33,7 +39,10 @@ export const MainScreen = () => {
       <div className="main-screen__nav-bar">
         <NavigationButton type="how-to-play" onClick={openHowToPlay} />
         <InfoLabel spinsAmount={spinsAmount} />
-        <NavigationButton type="settings" onClick={openHowToPlay} />
+        <NavigationButton
+          type="settings"
+          onClick={() => console.log("Settings")}
+        />
       </div>
       <TitleText />
       <CountDown spinsNumber={5} onCollectSpins={handleCollectSpins} />
@@ -46,6 +55,17 @@ export const MainScreen = () => {
       </div>
 
       <FortuneWheel spinning={isSpinning} setSpinning={setIsSpinning} />
+
+      {isHowToPlayOpen && (
+        <div className="popup-overlay">
+          <div className="popup-overlay__how-to-play">
+            <HowToPlayPopUp
+              closePopUp={closeHowToPlay}
+              isClosed={!isHowToPlayOpen}
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
