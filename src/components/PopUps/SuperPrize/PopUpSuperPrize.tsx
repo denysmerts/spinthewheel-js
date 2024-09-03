@@ -1,5 +1,5 @@
-import { ActionButton } from "../ActionButton";
-import { ReactComponent as BigWinSVG } from "../../assets/svgs/big-win.svg";
+import { ActionButton } from "../../ActionButton";
+import { ReactComponent as BigWinSVG } from "../../../assets/svgs/big-win.svg";
 import { useTranslation } from "react-i18next";
 import "./PopUpSuperPrize.scss";
 

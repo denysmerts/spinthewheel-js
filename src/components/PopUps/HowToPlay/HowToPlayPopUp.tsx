@@ -1,5 +1,5 @@
-import { ReactComponent as CrossSVG } from "../../assets/svgs/cross-icon.svg";
-import { ReactComponent as Chest } from "../../assets/svgs/chest.svg";
+import { ReactComponent as CrossSVG } from "../../../assets/svgs/cross-icon.svg";
+import { ReactComponent as Chest } from "../../../assets/svgs/chest.svg";
 import { useTranslation } from "react-i18next";
 import "./HowToPlayPopUp.scss";
 
