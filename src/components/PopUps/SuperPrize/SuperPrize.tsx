@@ -1,16 +1,20 @@
 import { ActionButton } from "../../ActionButton";
 import { ReactComponent as BigWinSVG } from "../../../assets/svgs/big-win.svg";
 import { useTranslation } from "react-i18next";
-import "./PopUpSuperPrize.scss";
+import "./SuperPrize.scss";
 
-const CollectPrize = () => {
-  console.log("Collected"); //add funciton to handle prize collection
-};
+interface SuperPrizeProps {
+  closePopUp: () => void; // Accept a function to close the popup
+}
 
-interface PopUpSuperPrizeProps {} //add props
+export const SuperPrize = ({ closePopUp }: SuperPrizeProps) => {
+  const { t } = useTranslation();
 
-export const PopUpSuperPrize = () => {
-  const { t } = useTranslation(); //add translation
+  const handleCollect = () => {
+    console.log("Collected");
+    closePopUp(); // Close the popup when the prize is collected
+  };
+
   return (
     <div className="pop-up-super-prize">
       <div className="pop-up-super-prize__big-win">
@@ -21,7 +25,7 @@ export const PopUpSuperPrize = () => {
         <ActionButton
           translationKey="collect"
           isActive={true}
-          handleClick={CollectPrize}
+          handleClick={handleCollect} // Use the handleCollect function
         />
       </div>
     </div>

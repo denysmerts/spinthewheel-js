@@ -1,1 +1,1 @@
-export * from "./PopUpSuperPrize";
+export * from "./SuperPrize";
