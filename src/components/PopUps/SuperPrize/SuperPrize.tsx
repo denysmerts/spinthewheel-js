@@ -10,6 +10,8 @@ interface SuperPrizeProps {
 export const SuperPrize = ({ closePopUp }: SuperPrizeProps) => {
   const { t } = useTranslation();
 
+  const prizeAmount = 10;
+
   const handleCollect = () => {
     console.log("Collected");
     closePopUp(); // Close the popup when the prize is collected
@@ -20,7 +22,9 @@ export const SuperPrize = ({ closePopUp }: SuperPrizeProps) => {
       <div className="pop-up-super-prize__big-win">
         <BigWinSVG />
       </div>
-      <div className="pop-up-super-prize__prize-text">+60 freespins</div>
+      <div className="pop-up-super-prize__prize-text">
+        {t("big-prize-amount", { prizeAmount })}
+      </div>
       <div className="pop-up-super-prize__collect-button">
         <ActionButton
           translationKey="collect"

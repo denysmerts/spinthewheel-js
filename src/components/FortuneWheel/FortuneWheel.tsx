@@ -56,7 +56,7 @@ export const FortuneWheel = ({ spinning, setSpinning }: FortuneWheelProps) => {
         style={{ transform: `rotate(${rotation}deg)` }}
       />
 
-      {showSuperPrize ?? (
+      {showSuperPrize && (
         <div className="popup-overlay-big-prize">
           <SuperPrize closePopUp={closeSuperPrize} />
         </div>

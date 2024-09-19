@@ -9,5 +9,6 @@
   "how-to-play-1": "Come back everyday to collect your spins",
   "how-to-play-2": "Use your spins to spin the wheel",
   "how-to-play-3": "Get chance to win Super Prize",
-  "how-to-play-4": "Win the prizes!"
+  "how-to-play-4": "Win the prizes!",
+  "big-prize-amount": "+{{prizeAmount}} freespins"
 }
