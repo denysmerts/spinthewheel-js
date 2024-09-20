@@ -9,11 +9,7 @@ interface ActionButtonProps {
   isActive: boolean;
 }
 
-export const ActionButton = ({
-  translationKey,
-  handleClick,
-  isActive,
-}: ActionButtonProps) => {
+export const ActionButton = ({translationKey,handleClick,isActive}: ActionButtonProps) => {
   const { t } = useTranslation();
 
   return (

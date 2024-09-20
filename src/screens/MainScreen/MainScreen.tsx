@@ -27,11 +27,11 @@ export const MainScreen = () => {
   };
 
   const openHowToPlay = () => {
-    setIsHowToPlayOpen(true); // Open the popup
+    setIsHowToPlayOpen(true); 
   };
 
   const closeHowToPlay = () => {
-    setIsHowToPlayOpen(false); // Close the popup
+    setIsHowToPlayOpen(false); 
   };
 
   return (
@@ -54,7 +54,11 @@ export const MainScreen = () => {
         />
       </div>
 
-      <FortuneWheel spinning={isSpinning} setSpinning={setIsSpinning} />
+      <FortuneWheel
+        spinning={isSpinning}
+        setSpinning={setIsSpinning}
+        collectSpins={handleCollectSpins} // Pass the function here
+      />
 
       {isHowToPlayOpen && (
         <div className="popup-overlay">

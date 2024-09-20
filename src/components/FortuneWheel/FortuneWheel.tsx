@@ -10,27 +10,30 @@ const segmentAngle = 360 / segments.length;
 interface FortuneWheelProps {
   spinning: boolean;
   setSpinning: (spinning: boolean) => void;
+  collectSpins: (spinsToAdd: number) => void; // Add a prop to collect spins
 }
 
-export const FortuneWheel = ({ spinning, setSpinning }: FortuneWheelProps) => {
+export const FortuneWheel = ({spinning,setSpinning,collectSpins}: FortuneWheelProps) => {
   const [rotation, setRotation] = useState(0);
-  const [showSuperPrize, setShowSuperPrize] = useState(false); // New state to track the SuperPrize visibility
+  const [showSuperPrize, setShowSuperPrize] = useState(false); // Track SuperPrize visibility
 
   const closeSuperPrize = () => {
     setShowSuperPrize(false); // Close the popup when the prize is collected
   };
 
+  const collectSuperPrize = (spins: number) => {
+    collectSpins(spins); // Adds spins to the total
+  };
+
   useEffect(() => {
     if (spinning) {
       const spinWheel = () => {
-        // Randomly calculate rotation (between 2 and 5 full rotations)
         const randomRotation = Math.floor(Math.random() * 360) + 720;
-
         setRotation((prevRotation) => prevRotation + randomRotation);
 
         setTimeout(() => {
-          const totalRotation = (rotation + randomRotation) % 360; // Ensure the total rotation is within 0-360 degrees
-          const normalizedRotation = (360 - totalRotation + 20) % 360; // Flip the rotation to match the segments correctly
+          const totalRotation = (rotation + randomRotation) % 360;
+          const normalizedRotation = (360 - totalRotation + 20) % 360;
           const segmentIndex = Math.floor(normalizedRotation / segmentAngle);
           const prize = segments[segmentIndex];
 
@@ -41,7 +44,7 @@ export const FortuneWheel = ({ spinning, setSpinning }: FortuneWheelProps) => {
           }
 
           setSpinning(false);
-        }, 4000); // 4 seconds to simulate the spinning duration
+        }, 4000); // Simulate spinning duration
       };
 
       spinWheel();
@@ -58,7 +61,10 @@ export const FortuneWheel = ({ spinning, setSpinning }: FortuneWheelProps) => {
 
       {showSuperPrize && (
         <div className="popup-overlay-big-prize">
-          <SuperPrize closePopUp={closeSuperPrize} />
+          <SuperPrize
+            closePopUp={closeSuperPrize}
+            collectSuperPrize={collectSuperPrize} // Pass the function
+          />
         </div>
       )}
     </div>

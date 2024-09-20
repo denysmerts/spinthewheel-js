@@ -12,5 +12,5 @@ export default meta;
 type Story = StoryObj<typeof SuperPrize>;
 
 export const Default: Story = {
-  render: () => <SuperPrize closePopUp={() => console.log("Popup closed")} />, // Mock function for closePopUp
+  render: () => <SuperPrize closePopUp={() => console.log("Popup closed")} collectSuperPrize={() => console.log("PrizeCollected")} />, // Mock function for closePopUp
 };

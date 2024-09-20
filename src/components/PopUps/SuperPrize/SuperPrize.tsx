@@ -4,17 +4,18 @@ import { useTranslation } from "react-i18next";
 import "./SuperPrize.scss";
 
 interface SuperPrizeProps {
-  closePopUp: () => void; // Accept a function to close the popup
+  closePopUp: () => void;
+  collectSuperPrize: (spins: number) => void;
 }
 
-export const SuperPrize = ({ closePopUp }: SuperPrizeProps) => {
+export const SuperPrize = ({closePopUp, collectSuperPrize }: SuperPrizeProps) => {
   const { t } = useTranslation();
 
   const prizeAmount = 10;
 
-  const handleCollect = () => {
-    console.log("Collected");
-    closePopUp(); // Close the popup when the prize is collected
+  const collectPrize = () => {
+    collectSuperPrize(prizeAmount);
+    closePopUp();
   };
 
   return (
@@ -29,7 +30,7 @@ export const SuperPrize = ({ closePopUp }: SuperPrizeProps) => {
         <ActionButton
           translationKey="collect"
           isActive={true}
-          handleClick={handleCollect} // Use the handleCollect function
+          handleClick={collectPrize}
         />
       </div>
     </div>
